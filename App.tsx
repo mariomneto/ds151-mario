@@ -1,14 +1,14 @@
-import { NavigationContainer, RouteProp,  } from '@react-navigation/native';
-import { createNativeStackNavigator, NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { NavigationContainer, RouteProp, } from '@react-navigation/native';
+import { NativeStackNavigationProp, createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import HomeScreen from './src/screens/HomeScreen';
+import ListScreen from './src/screens/ListScreen';
 import ScreenA from './src/screens/ScreenA';
-import ScreenB from './src/screens/ScreenB';
 
 type RootStackParamList = {
   Home: undefined;
   ScreenA: undefined;
-  ScreenB: undefined;
+  ListScreen: undefined;
 };
 
 export type ScreenNavigationProp = NativeStackNavigationProp<RootStackParamList>;
@@ -23,7 +23,7 @@ const App: React.FC = () => {
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="ScreenA" component={ScreenA} />
-        <Stack.Screen name="ScreenB" component={ScreenB} />
+        <Stack.Screen name="ListScreen" component={ListScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

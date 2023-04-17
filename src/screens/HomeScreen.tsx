@@ -16,8 +16,8 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation, route }) => {
                 <Text style={styles.buttonText}>Tela A</Text>
             </Pressable>
 
-            <Pressable style={styles.button} onPress={() => navigation.navigate('ScreenB')}>
-                <Text style={styles.buttonText}>Tela B</Text>
+            <Pressable style={styles.button} onPress={() => navigation.navigate('ListScreen')}>
+                <Text style={styles.buttonText}>Lista</Text>
             </Pressable>
         </View>
     );

@@ -1,6 +1,6 @@
-import { StyleSheet, TextStyle, ViewStyle } from "react-native";
+import { ImageStyle, StyleSheet, TextStyle, ViewStyle } from "react-native";
 
-const styles = StyleSheet.create({
+const styles = {
     container: {
         display: "flex",
         height: "100%",
@@ -25,6 +25,19 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 50
     } as TextStyle,
-});
+
+    colorListItem: (backgroundColor: string): ViewStyle => ({
+        backgroundColor,
+        width: 80,
+        height: 80,
+        borderRadius: 5
+    }) as ViewStyle,
+
+    imageListItem: {
+        width: 80,
+        height: 80,
+        borderRadius: 5
+    } as ImageStyle
+};
 
 export default styles;
